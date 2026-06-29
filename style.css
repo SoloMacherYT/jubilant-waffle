@@ -1,0 +1,114 @@
+/*
+🎨 Key Colors
+Orange (suit & rifle): #f36c1d
+
+Black (visor, nav bar, text): #000000
+
+White (chapter text, button text): #ffffff
+
+Sky Blue (background sky): #6bb8f2
+
+Green (trees): #3b6b2f
+
+Gray (mountains): #7a7a7a
+
+Light Gray (mountain highlights): #bcbcbc
+
+🖌️ Accent Colors
+Button Orange (JOIN PRE SALE): #f36c1d (same as suit, consistent branding)
+
+Button Background (hover white): #ffffff
+
+Text Gray (description text): #dcdcdc
+
+
+*/
+
+
+
+
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    flex-direction: column;
+}
+nav{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: linear-gradient(to bottom, black 0%, black 1%, white 100%);
+    backdrop-filter: blur(8px);
+}
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 10px ;
+    gap: 20px;
+    list-style-type: none;
+}
+#mid{
+    color: red;
+    background: #000;
+    padding: 9px 50px 10.19px;
+     clip-path: polygon(
+        0 0,
+        100% 0,
+        80% 100%,
+        20% 100%
+    )
+}
+
+#login, #logo{
+    flex: 0 0 auto;
+    margin: 0 30px;
+}
+
+a{
+    color: white;
+    text-decoration: none;
+}
+span{
+    margin-left: 4px;
+}
+#menu-icon{
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+    margin-right: 20px;
+}
+/* Responsive behaviour*/
+@media(max-width:768px){
+    #mid{
+        display: none;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        background: #000;
+        border-radius: 8px;
+        padding: 10px 20px;
+    }
+    #mid ul{
+        flex-direction: column;
+        gap: 10px;
+    }
+    #menu-icon{
+        display: block;
+    }
+    #mid.open{
+        display: flex;
+    }
+}
+#right{
+    display: flex;
+    align-items: center;
+}
+
